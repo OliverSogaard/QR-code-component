@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1440, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">  
@@ -17,31 +17,31 @@
       margin: 0;
       padding: 0;
       font-family: 'Outfit', sans-serif;
+      font-size: 15px;
     }
 
     body {
       background-color: hsl(212, 45%, 89%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .card {
-      position: fixed;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      left: 50%;
       display: flex;
       flex-direction: column;
       columns: 2fr 1fr;
-      gap: 1rem;
-      width: 300px;
+      max-width: 300px;
       background-color: hsl(0, 0%, 100%);
-      border-radius: 2rem;
-      box-shadow: 0 0 10 rgba(255, 255, 255, 0.5);
+      border-radius: 1rem;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       padding: 1rem;
     }
 
     .card-qr {
-      border-radius: 1rem;
-      width: 300px;
+      border-radius: 0.5rem;
+      max-width: 100%;
     }
 
     .card-text {
@@ -52,12 +52,12 @@
     }
 
     .card-title {
-      font-size: 22px;
+      font-size: 1.5rem;
+      font-weight: 700;
       color: hsl(218, 44%, 22%);
     }
 
     .card-paragraph {
-      font-size: 15px;
       color: hsl(220, 15%, 55%);
     }
   </style>
@@ -65,13 +65,13 @@
 
 <body>
 
-  <div class="card">
-    <img class="card-qr" src="image-qr-code.png">
+  <main class="card">
+    <img class="card-qr" src="image-qr-code.png" alt="QR Code">
     <div class="card-text">
       <h1 class="card-title">Improve your front-end skills by building projects</h1>
       <p class="card-paragraph">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
     </div>
-  </div>
+  </main>
 
 </body>
 </html>
